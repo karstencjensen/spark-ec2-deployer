@@ -26,5 +26,3 @@ do
   # Add the jar to spark-defaults.conf
   echo "spark.jars += /usr/local/spark/jars/$jar_name" >> /usr/local/spark/conf/spark-defaults.conf
 done
-
-echo "hi - ugh!"
