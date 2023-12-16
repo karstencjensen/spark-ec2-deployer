@@ -11,6 +11,6 @@ for bucket in "${S3_BUCKET_NAMES[@]}"; do
   sudo chown ec2-user:ec2-user /repository
 
   # Mount S3 bucket to target directory
-  sudo s3fs "${bucket}" "/repository/${bucket}" -o iam_role=auto -o allow_other -o uid=1001 -o mp_umask=002 -o multireq_max=5 -o use_path_request_style -o url=https://s3.us-east-2.amazonaws.com -o endpoint=us-east-2
+  sudo s3fs "${bucket}" "/repository/${bucket}" -o iam_role=auto -o allow_other -o mp_umask=002 -o multireq_max=5 -o use_path_request_style -o url=https://s3.us-east-2.amazonaws.com -o endpoint=us-east-2
 done
 
